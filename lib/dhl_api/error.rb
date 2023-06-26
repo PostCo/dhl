@@ -1,3 +1,3 @@
-module DHL
+module DHLAPI
   class Error < StandardError; end
 end

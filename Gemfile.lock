@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dhl (0.1.0)
+    dhl_api (0.1.0)
       activesupport (>= 4.0.2)
       http (~> 5.0)
 
@@ -142,7 +142,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  dhl!
+  dhl_api!
   dotenv
   gem-release
   guard-rspec

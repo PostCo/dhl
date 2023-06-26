@@ -1,4 +1,4 @@
-module DHL
+module DHLAPI
   class Configuration
     attr_accessor :api_key, :testing
   end
@@ -16,7 +16,7 @@ module DHL
     def after_configure
       config.testing ||= false
 
-      # register special mime type for DHL error responses
+      # register special mime type for DHLAPI error responses
       HTTP::MimeType.register_adapter 'application/problem+json', HTTP::MimeType::JSON
     end
   end

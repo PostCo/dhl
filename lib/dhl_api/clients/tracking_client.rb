@@ -1,4 +1,4 @@
-module DHL
+module DHLAPI
   class TrackingClient < BaseClient
     URL = 'https://api-eu.dhl.com/track/shipments'
     TEST_URL = 'https://api-test.dhl.com/track/shipments'

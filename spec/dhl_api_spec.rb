@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe DHL do
+RSpec.describe DHLAPI do
   it 'has a version number' do
-    expect(DHL::VERSION).not_to be nil
+    expect(DHLAPI::VERSION).not_to be nil
   end
 
   it 'does something useful' do

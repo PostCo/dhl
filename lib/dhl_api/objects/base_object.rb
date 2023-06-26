@@ -1,4 +1,4 @@
-module DHL
+module DHLAPI
   class BaseObject < OpenStruct
     attr_reader :attributes
 

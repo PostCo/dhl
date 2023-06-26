@@ -1,12 +1,12 @@
 require 'http'
 
-module DHL
+module DHLAPI
   class BaseClient
     attr_writer :http_client
     attr_reader :response
 
     def connection
-      @connection ||= HTTP.headers(content_type: 'application/json', dhl_api_key: DHL.config.api_key)
+      @connection ||= HTTP.headers(content_type: 'application/json', dhl_api_key: DHLAPI.config.api_key)
     end
 
     private
@@ -14,7 +14,7 @@ module DHL
     attr_writer :response
 
     def url
-      DHL.config.testing ? self.class::TEST_URL : self.class::URL
+      DHLAPI.config.testing ? self.class::TEST_URL : self.class::URL
     end
 
     def handle_response
@@ -33,7 +33,7 @@ module DHL
         raise Error, "The API rate limit for your application has been exceeded. #{error_message}"
       when 500
         raise Error,
-              "An unhandled error with the . Contact the DHL team if problems persist. #{error_message}"
+              "An unhandled error with the . Contact the DHLAPI team if problems persist. #{error_message}"
       when 503
         raise Error,
               "API is currently unavailable – typically due to a scheduled outage – try again soon. #{error_message}"

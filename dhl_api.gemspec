@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
-require_relative 'lib/dhl/version'
+require_relative 'lib/dhl_api/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'dhl_api'
-  spec.version = DHL::VERSION
+  spec.version = DHLAPI::VERSION
   spec.authors = ['Andy Chong']
   spec.email = ['andy@youdontknow.me']
 
-  spec.summary = 'Ruby API Wrapper for DHL'
-  spec.homepage = 'https://github.com/PostCo/dhl'
+  spec.summary = 'Ruby API Wrapper for DHL API'
+  spec.homepage = 'https://github.com/PostCo/dhl_api'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
   spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/PostCo/dhl'
-  spec.metadata['changelog_uri'] = 'https://github.com/PostCo/dhl/blob/main/CHANGELOG.md'
+  spec.metadata['source_code_uri'] = 'https://github.com/PostCo/dhl_api'
+  spec.metadata['changelog_uri'] = 'https://github.com/PostCo/dhl_api/blob/main/CHANGELOG.md'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

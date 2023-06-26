@@ -3,11 +3,11 @@ require_relative 'config'
 
 loader = Zeitwerk::Loader.for_gem
 loader.inflector.inflect(
-  'dhl' => 'DHL'
+  'dhl_api' => 'DHLAPI'
 )
 loader.push_dir('./lib')
-loader.collapse('./lib/dhl/clients')
-loader.collapse('./lib/dhl/objects')
+loader.collapse('./lib/dhl_api/clients')
+loader.collapse('./lib/dhl_api/objects')
 loader.ignore("#{__dir__}/config.rb")
 loader.enable_reloading
 # loader.log!

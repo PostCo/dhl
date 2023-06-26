@@ -1,4 +1,4 @@
-module DHL
+module DHLAPI
   class RetoureClient < BaseClient
     URL = 'https://api-eu.dhl.com/parcel/de/shipping/returns/v1/orders'
     TEST_URL = 'https://api-sandbox.dhl.com/parcel/de/shipping/returns/v1/orders'
@@ -28,11 +28,11 @@ module DHL
     private
 
     def username
-      @username ||= ENV['DHL_RETOURE_USERNAME']
+      @username ||= ENV['DHLAPI_RETOURE_USERNAME']
     end
 
     def password
-      @password ||= ENV['DHL_RETOURE_PASSWORD']
+      @password ||= ENV['DHLAPI_RETOURE_PASSWORD']
     end
   end
 end
