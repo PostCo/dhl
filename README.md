@@ -72,7 +72,7 @@ tracking = track_client.track(tracking_number: '420025369374810912402173942693')
 
 # You can access the raw response by calling by calling the #response:
 retoure_client.response
-tracking_client.response
+track_client.response
 # It is a HTTP::Response object. See https://github.com/httprb/http/wiki/Response-Handling for more info.
 
 # You can access the raw attributes before the keys is parsed to snake_case by calling the #attributes:
