@@ -3,7 +3,7 @@
 require_relative 'lib/dhl/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'dhl'
+  spec.name = 'dhl_api'
   spec.version = DHL::VERSION
   spec.authors = ['Andy Chong']
   spec.email = ['andy@youdontknow.me']
