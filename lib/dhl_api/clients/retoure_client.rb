@@ -17,7 +17,8 @@ module DHLAPI
     attr_accessor :label_type
 
     def create_label(attributes = {})
-      self.response = connection.post(url, json: attributes, params: { labelType: label_type })
+      payload = attributes.deep_transform_keys { |key| key.to_s.camelize(:lower) }
+      self.response = connection.post(url, json: payload, params: { labelType: label_type })
       RetoureLabel.new handle_response.parse
     end
 
