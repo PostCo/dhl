@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dhl_api (0.1.0)
+    dhl_api (0.1.2)
       activesupport (>= 4.0.2)
       http (~> 5.0)
 
