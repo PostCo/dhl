@@ -4,7 +4,9 @@ module DHLAPI
 
     def initialize(attributes = {})
       @attributes = attributes
-      super to_ostruct(attributes)
+      ostruct = to_ostruct(attributes)
+      ostruct = ostruct.empty? ? nil : ostruct
+      super ostruct
     end
 
     private
@@ -13,9 +15,9 @@ module DHLAPI
       if obj.is_a?(Hash)
         OpenStruct.new(obj.map { |key, val| [key.to_s.underscore, to_ostruct(val)] }.to_h)
       elsif obj.is_a?(Array)
-        return if obj.empty?
-
         obj.map { |o| to_ostruct(o) }
+      else # Assumed to be a primitive value
+        obj
       end
     end
   end
